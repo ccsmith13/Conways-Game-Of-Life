@@ -30,6 +30,7 @@ class Board extends React.Component {
         cells: [], 
         interval: 100,
         isRunning: false,
+        currentGen: 0,
     };
     runGame = () => {
         this.setState({isRunning: true});
@@ -46,6 +47,7 @@ class Board extends React.Component {
         this.board = this.makeEmptyBoard();
         this.setState({cells: this.makeCells()});
         this.stopGame();
+        this.setState({currentGen: 0});
     }
     makeEmptyBoard(){
         let board = [];
@@ -108,6 +110,7 @@ class Board extends React.Component {
         }
         this.board = newBoard;
         this.setState({cells: this.makeCells()});
+        this.setState({currentGen: this.state.currentGen+1});
         this.timeoutHandler = window.setTimeout(()=>{
             this.runIteration()},
             this.state.interval)
@@ -121,6 +124,7 @@ class Board extends React.Component {
         };
     }
     handleClick = (event) => {
+        if (!this.state.isRunning){
         const elemOffset = this.getElementOffset();
         const offsetX = event.clientX - elemOffset.x;
         const offsetY = event.clientY - elemOffset.y;
@@ -129,7 +133,7 @@ class Board extends React.Component {
         if(x >= 0 && x <= this.cols && y >= 0 && y <= this.rows){
             this.board[y][x] = !this.board[y][x];
             this.setState({cells: this.makeCells()});
-        }
+        }}
     }
     handleRandom = () => {
         for(let y=0; y < this.rows; y++){
@@ -137,12 +141,14 @@ class Board extends React.Component {
                 this.board[y][x] = Math.random() >= 0.5;
             }
         }
+        this.setState({currentGen: 0});
         this.setState({cells: this.makeCells()});
     }
     render(){
         const { cells } = this.state;
         return(
             <div>
+                <h1>{this.state.currentGen}</h1>
                 <div 
                 className = "Board" style = {{width:WIDTH, height:HEIGHT, backgroundSize: `${CELL_SIZE}px ${CELL_SIZE}px`}}
                 onClick = {this.handleClick}
