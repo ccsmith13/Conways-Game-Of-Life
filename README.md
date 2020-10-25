@@ -54,6 +54,16 @@
 
 * React JS 
 
+## Exceptional Difficulties / Solutions
+
+* Grid coordinate click location is offset after board is cleared --> still working on this bug
+    * Solution TBD
+
+## Future Feature Wish List  
+
+* Implementing change in grid size feature
+    * Solution = TBD
+
 <!-- GETTING STARTED -->
 ## Getting Started
 
@@ -81,7 +91,8 @@ npm install
 <!-- USAGE EXAMPLES -->
 ## Usage
 
-To visually demonstrate Conway's Game of life. 
+Problem this app solves: Visual demonstration of Conway's Game of life. 
+
 Rules and further explanation: https://en.wikipedia.org/wiki/Conway%27s_Game_of_Life
 
 ## MVP Additional Features List
