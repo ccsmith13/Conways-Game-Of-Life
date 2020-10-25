@@ -16,7 +16,7 @@
 <!-- PROJECT LOGO -->
 <br />
 <p align="center">
-  <a href="https://github.com/ccsmith13/Conway-Game-Of-Life">
+  <a href="https://github.com/ccsmith13/Conways-Game-Of-Life">
     <img src="images/logo.png" alt="Logo" width="80" height="80">
   </a>
 
@@ -26,9 +26,9 @@
     Implementation of Conway's Game of Life for Lambda School Labs - CS I 
     <br />
     ·
-    <a href="https://github.com/ccsmith13/Conway-Game-Of-Life/issues">Report Bug</a>
+    <a href="https://github.com/ccsmith13/Conways-Game-Of-Life/issues">Report Bug</a>
     ·
-    <a href="https://github.com/ccsmith13/Conway-Game-Of-Life/issues">Request Feature</a>
+    <a href="https://github.com/ccsmith13/Conways-Game-Of-Life/issues">Request Feature</a>
   </p>
 </p>
 
@@ -74,7 +74,7 @@ npm install npm@latest -g
 
 1. Clone the repo
 ```sh
-git clone https://github.com/ccsmith13/Conway-Game-Of-Life.git
+git clone https://github.com/ccsmith13/Conways-Game-Of-Life.git
 ```
 2. Install NPM packages
 ```sh
@@ -96,7 +96,7 @@ Rules and further explanation: https://en.wikipedia.org/wiki/Conway%27s_Game_of_
 <!-- ROADMAP -->
 ## Roadmap
 
-See the [open issues](https://github.com/ccsmith13/Conway-Game-Of-Life/issues) for a list of proposed features (and known issues).
+See the [open issues](https://github.com/ccsmith13/Conways-Game-Of-Life/issues) for a list of proposed features (and known issues).
 
 <!-- CONTRIBUTING -->
 ## Contributing
@@ -119,17 +119,17 @@ Distributed under the MIT License. See `LICENSE` for more information.
 
 Christine Smith
 
-Project Link: [https://github.com/ccsmith13/Conway-Game-Of-Life](https://github.com/ccsmith13/Conway-Game-Of-Life)
+Project Link: [https://github.com/ccsmith13/Conways-Game-Of-Life](https://github.com/ccsmith13/Conways-Game-Of-Life)
 
 
 <!-- MARKDOWN LINKS & IMAGES -->
 <!-- https://www.markdownguide.org/basic-syntax/#reference-style-links -->
-[contributors-shield]: https://img.shields.io/github/contributors/gccsmith13/Conway-Game-Of-Life.svg?style=flat-square
-[contributors-url]: https://github.com/ccsmith13/Conway-Game-Of-Life/graphs/contributors
-[forks-shield]: https://img.shields.io/github/forks/ccsmith13/Conway-Game-Of-Life.svg?style=flat-square
-[forks-url]: https://github.com/ccsmith13/Conway-Game-Of-Life/network/members
-[stars-shield]: https://img.shields.io/github/stars/ccsmith13/Conway-Game-Of-Life.svg?style=flat-square
-[stars-url]: https://github.com/ccsmith13/Conway-Game-Of-Life/stargazers
-[issues-shield]: https://img.shields.io/github/issues/ccsmith13/Conway-Game-Of-Life.svg?style=flat-square
-[issues-url]: https://github.com/ccsmith13/Conway-Game-Of-Life/issues
-[linkedin-url]: https://linkedin.com/in/ccsmith13
+[contributors-shield]: https://img.shields.io/github/contributors/github/ccsmith13/Conways-Game-Of-Life.svg?style=flat-square
+[contributors-url]: https://github.com/ccsmith13/Conways-Game-Of-Life/graphs/contributors
+[forks-shield]: https://img.shields.io/github/forks/ccsmith13/Conways-Game-Of-Life.svg?style=flat-square
+[forks-url]: https://github.com/ccsmith13/Conways-Game-Of-Life/network/members
+[stars-shield]: https://img.shields.io/github/stars/ccsmith13/Conways-Game-Of-Life.svg?style=flat-square
+[stars-url]: https://github.com/ccsmith13/Conways-Game-Of-Life/stargazers
+[issues-shield]: https://img.shields.io/github/issues/ccsmith13/Conways-Game-Of-Life.svg?style=flat-square
+[issues-url]: https://github.com/ccsmith13/Conways-Game-Of-Life/issues
+[linkedin-url]: https://linkedin.com/in/ccsmith1
