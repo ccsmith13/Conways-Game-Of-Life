@@ -6,7 +6,19 @@
         linear-gradient(#333 1px, transparent 1px),
         linear-gradient(90deg, #333 1px, transparent 1px);
 }
-.Cell {
-    background: #ccc;
+.White {
+    background: white;
+    position: absolute;
+}
+.Pink {
+    background:pink;
+    position: absolute;
+}
+.Blue {
+    background: blue;
+    position: absolute;
+}
+.Purple {
+    background: purple;
     position: absolute;
 }

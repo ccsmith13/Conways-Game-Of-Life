@@ -6,10 +6,11 @@ const WIDTH = 800;
 const HEIGHT = 600; 
 
 class Cell extends React.Component{
+    
     render(){
-        const{x,y} = this.props;
+        const{x,y,cellColor} = this.props;
         return(
-            <div className = "Cell"
+            <div className = {cellColor}
                 style = {{left: `${CELL_SIZE * x + 1}px`,
                 top: `${CELL_SIZE * y + 1}px`,
                 width: `${CELL_SIZE -1}px`,
@@ -24,13 +25,13 @@ class Board extends React.Component {
         this.rows = HEIGHT/CELL_SIZE;
         this.cols = WIDTH/CELL_SIZE;
         this.board = this.makeEmptyBoard();
-        
     }
     state = {
         cells: [], 
         interval: 100,
         isRunning: false,
         currentGen: 0,
+        cellColor: "White",
     };
     runGame = () => {
         this.setState({isRunning: true});
@@ -88,7 +89,7 @@ class Board extends React.Component {
         this.setState({interval: event.target.value});
     }
     runIteration(){
-        console.log('running iteration');
+        //console.log('running iteration');
         let newBoard = this.makeEmptyBoard();
         for(let y=0; y<this.rows; y++){
             for(let x=0; x<this.cols; x++){
@@ -108,6 +109,7 @@ class Board extends React.Component {
                 }
             }
         }
+        //console.log('newBoard', newBoard);
         this.board = newBoard;
         this.setState({cells: this.makeCells()});
         this.setState({currentGen: this.state.currentGen+1});
@@ -144,17 +146,21 @@ class Board extends React.Component {
         this.setState({currentGen: 0});
         this.setState({cells: this.makeCells()});
     }
+
+    handleColorSelection = (event) => {
+        this.setState({cellColor: event.target.value});
+      }
     render(){
         const { cells } = this.state;
         return(
             <div>
-                <h1>{this.state.currentGen}</h1>
+                <h1>Current Generation: {this.state.currentGen}</h1>
                 <div 
                 className = "Board" style = {{width:WIDTH, height:HEIGHT, backgroundSize: `${CELL_SIZE}px ${CELL_SIZE}px`}}
                 onClick = {this.handleClick}
                 ref={(n)=>{this.boardRef = n;}}>
                     {cells.map(cell =>(
-                        <Cell x={cell.x} y={cell.y} 
+                        <Cell x={cell.x} y={cell.y} cellColor={this.state.cellColor}
                         key = {`${cell.x}, ${cell.y}`}/>
                     ))}
                 </div>
@@ -181,6 +187,13 @@ class Board extends React.Component {
                     <button className="button" 
                     onClick = {this.handleClear}>Clear</button>
 
+                    <div>
+                        <h2>Select Cell Color</h2>
+                        <button onClick={this.handleColorSelection} className="button" value="White">White</button>
+                        <button onClick={this.handleColorSelection} className="button" value="Pink">Pink</button>
+                        <button onClick={this.handleColorSelection} className="button" value="Blue">Blue</button>
+                        <button onClick={this.handleColorSelection} className="button" value="Purple">Purple</button>
+                    </div>
                 </div>
             </div>
         );
