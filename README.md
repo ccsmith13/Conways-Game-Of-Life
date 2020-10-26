@@ -19,6 +19,8 @@
   </a>
 
   <h3 align="center">CONWAY'S GAME OF LIFE</h3>
+  
+  <h1>https://loving-haibt-f1f159.netlify.app/</h1>
 
   <p align="center">
     Implementation of Conway's Game of Life for Lambda School Labs - CS I 
